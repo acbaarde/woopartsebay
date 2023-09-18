@@ -1,0 +1,2490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WooParts eBay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,500;0,700;0,800;1,300;1,500;1,700;1,800&display=swap">
+</head>
+
+<style>
+:root{
+    --primary-color: #003333;
+    --secondary-color: #25b68f;
+    --text-color: #fff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+body {
+    background: #fff;
+    color: #000;
+}
+/* MAIN HEADER */
+
+/* HEADER TOP */
+.main-header{
+    width: 100%;
+    height: auto;
+}
+.main-header .header-top{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.main-header .header-top .logo{
+    width: 100px;
+    height: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    position: absolute;
+    left: 10em;
+}
+.main-header .header-top .logo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-header .header-top .navbar ul{
+    display: flex;
+    gap: 4em;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-header .header-top .navbar ul li{
+    width: auto;
+    height: 50px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-header .header-top .navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+    transform: skewX(-45deg);
+}
+.main-header .header-top .navbar ul li:hover::after{
+    width: 100%;
+}
+/* END HEADER TOP */
+
+/* HEADER BANNER */
+.main-header .header-banner{
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+.main-header .header-banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-header .header-banner .banner-text{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 2em 4em;
+}
+.main-header .header-banner .banner-text::after{
+    position: absolute;
+    content: '';
+    height: 1em;
+    width: 90%;
+    left: 1.2em;
+    bottom: -20px;
+    background: var(--secondary-color);
+    transform: skewX(-45deg);
+}
+.main-header .header-banner .banner-text a{
+    font-size: 2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.main-header .header-banner .banner-text img{
+    width: 35px;
+    color: var(--primary-color);
+}
+/* END HEADER BANNER */
+
+/* HEADER GALLERY */
+.header-gallery{
+    width: 100%;
+    display: flex;
+}
+.header-gallery .gallery-title{
+    width: 25%;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.header-gallery .gallery-title div{
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+    position: relative;
+    font-size: 2.5em;
+    letter-spacing: 0.2em;
+}
+.header-gallery .gallery-title div::after{
+    content: '';
+    position: absolute;
+    height: 40px;
+    width: 10%;
+    right: 5px;
+    bottom: -40px;
+    background: var(--secondary-color);
+}
+.header-gallery .gallery-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.header-gallery .gallery-content a{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+}
+.header-gallery .gallery-content a:hover{
+    color: var(--secondary-color);
+}
+.header-gallery .gallery-content a div{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+.header-gallery .gallery-content a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 10px 0;
+}
+.header-gallery .gallery-content a span{
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+/* END HEADER GALLERY*/
+
+/* END MAIN HEADER */
+
+/* MAIN CONTENT */
+.main-content{
+    width: 100%;
+}
+.main-content .container{
+    width: 80%;
+    margin: 5em auto;
+    overflow: hidden;
+}
+
+/* HIGHLIGHT SECTION */
+.main-content .container .highlight-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    padding: 20px 50px;
+}
+.main-content .container .highlight-section .section-main{
+    margin-right: 4em;
+    width: 800px;
+    height: 800px;
+    border-radius: 30px;
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), 12px 12px 15px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
+.main-content .container .highlight-section .section-main img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-content .container .highlight-section .section-side{
+    width: 40%;
+    color: var(--primary-color);
+}
+.main-content .container .highlight-section .section-side h3{
+    font-size: 2em;
+    line-height: 1.2em;
+    position: relative;
+    margin-bottom: 1em;
+}
+.main-content .container .highlight-section .section-side h3::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    background: var(--primary-color);
+}
+.main-content .container .highlight-section .section-side ul{
+    font-size: 1.8em;
+}
+.main-content .container .highlight-section .section-side ul li{
+    padding: 15px 0;
+}
+.main-content .container .highlight-section .section-side ul li h4::before{
+    content: "\25FC";
+    color: var(--secondary-color);
+    font-weight: bold;
+    display: inline-block; 
+    width: 1.2em;
+}
+.main-content .container .highlight-section .section-side ul li p{
+    padding-left: 1.2em;
+}
+/* END HIGHLIGHT SECTION */
+
+/* SECTION TITLE */
+.main-content .section-title{
+    width: 100%;
+    color: var(--primary-color);
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-size: 2em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.main-content .section-title:before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    background: var(--secondary-color);
+    z-index: -2;
+}
+.main-content .section-title span{
+    background: #fff;
+    padding: 13px;
+}
+/* END SECTION TITLE */
+
+/* PRODUCT SECTION */
+.main-content .container .product-section{
+    width: 100%;
+    padding: 0 30px;
+    font-size: 1.8em;
+}
+.main-content .container .product-section h4{
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+.main-content .container .product-section ul{
+    padding: 10px 20px;
+    margin-bottom: 1.5em;
+    list-style: square;
+}
+.main-content .container .product-section ul li{
+    padding: 10px 0;
+    color: var(--secondary-color);
+}
+.main-content .container .product-section ul li span{
+    color: var(--primary-color);
+}
+/* END PRODUCTION SECTION */
+
+/* RECOMMENDED SECTION */
+.main-content .container .recommended-section .section-banner{
+    width: 100%;
+    min-height: 230px;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+.main-content .container .recommended-section .section-banner img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.main-content .container .recommended-section .section-button{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.main-content .container .recommended-section .section-button h3{
+    padding: 1.5em 0;
+    font-size: 2em;
+}
+.main-content .container .recommended-section .section-button .button-group{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-content .container .recommended-section .section-button .button-group > a{
+    width: auto;
+    height: 50px;
+    background: #fff;
+    margin: 20px 0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 3px 3px 4px rgba(0, 0, 0, 0.12);
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.main-content .container .recommended-section .section-button .button-group > a:focus{
+    background: var(--secondary-color);
+    outline: 1px solid var(--secondary-color);
+    color: var(--text-color);
+}
+.main-content .container .recommended-section .section-button .button-group > a:hover{
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+/* END RECOMMENDED SECTION */
+
+/* MAINTENANCE SECTION */
+.main-content .container .maintenance-section .section-banner{
+    width: 100%;
+    height: auto;
+    min-height: 230px;
+    margin: auto;
+    overflow: hidden;
+}
+.main-content .container .maintenance-section .section-banner img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.main-content .container .maintenance-section .section-button{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+.main-content .container .maintenance-section .section-button h3{
+    padding: 1.5em 0;
+    font-size: 2em;
+}
+.main-content .container .maintenance-section .section-button .button-group{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.main-content .container .maintenance-section .section-button .button-group > a{
+    width: auto;
+    height: 50px;
+    background: #fff;
+    margin: 20px 0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 3px 3px 4px rgba(0, 0, 0, 0.12);
+    border: none;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.main-content .container .maintenance-section .section-button .button-group > a:focus{
+    background: var(--secondary-color);
+    outline: 1px solid var(--secondary-color);
+    color: var(--text-color);
+}
+.main-content .container .maintenance-section .section-button .button-group > a:hover{
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+/* END MAINTENANCE SECTION */
+
+/* FEATURED SECTION */
+.main-content .container .featured-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.main-content .container .featured-section .section-header{
+    padding: 20px 50px;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+.main-content .container .featured-section .section-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.main-content .container .featured-section .section-content .content-img{
+    width: 900px;
+    height: 700px;
+    overflow: hidden;
+    margin-right: 2em;
+}
+.main-content .container .featured-section .section-content .content-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-content .container .featured-section .section-content .content-button{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+.main-content .container .featured-section .section-content .content-button > a{
+    color: var(--primary-color);
+    width: 200px;
+    height: 50px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 3px 3px 4px rgba(0, 0, 0, 0.12);
+    border: none;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+.main-content .container .featured-section .section-content .content-button > a:focus{
+    background: var(--secondary-color);
+    outline: 1px solid var(--secondary-color);
+    color: var(--text-color);
+}
+.main-content .container .featured-section .section-content .content-button > a:hover{
+    background: var(--secondary-color);
+    color: var(--text-color);
+}
+/* END FEATURED SECTION */
+
+/* CATEGORIES SECTION */
+.main-content .container .categories-section{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-wrap: wrap;
+    color: var(--primary-color);
+    font-size: 1.5em;
+    text-align: start;
+}
+.main-content .container .categories-section > div{
+    width: 300px;
+    padding: 10px;
+    /* margin: 20px; */
+}
+.main-content .container .categories-section > div .section-img{
+    width: 280px;
+    height: 280px;
+    overflow: hidden;
+}
+.main-content .container .categories-section > div .section-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-content .container .categories-section > div h4{
+    font-weight: bold;
+    padding: 5px 4px;
+}
+.main-content .container .categories-section > div p{
+    font-weight: normal;
+    padding: 0 4px;
+}
+/* END CATEGORIES SECTION */
+
+/* ABOUT SECTION */
+.container-about{
+    width: 100%;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+}
+.about-section{
+    width: 80%;
+    display: flex;
+    margin: auto;
+    padding: 40px 0;
+}
+.about-section .section-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 25%;
+    gap: 2em;
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+.about-section .section-button label{
+    cursor: pointer;
+    display: flex;
+    color: var(--primary-color);
+    padding: 0 5px;
+    letter-spacing: 2px;
+}
+.about-section .section-content{
+    padding: 10px 20px;
+    width: 75%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+    font-size: 1.5em;
+    font-weight: normal;
+    color: var(--primary-color);
+    line-height: 1.5em;
+}
+.about-section .section-content .text{
+    display: none;
+}
+.about-section .section-content .about-1{
+    display: block;
+}
+.about-section .section-button label h3{
+    padding: 0 5px;
+}
+#about-1 ~ .section-button .about-1 h3,
+#about-2 ~ .section-button .about-2 h3,
+#about-3 ~ .section-button .about-3 h3{
+    border-bottom: 3px solid transparent;
+}
+#about-1:checked ~ .section-button .about-1 h3,
+#about-2:checked ~ .section-button .about-2 h3,
+#about-3:checked ~ .section-button .about-3 h3{
+    border-bottom: 3px solid var(--secondary-color);
+}
+#about-1:checked ~ .section-content .about-1,
+#about-2:checked ~ .section-content .about-2,
+#about-3:checked ~ .section-content .about-3{
+    display: block;
+}
+#about-2:checked ~ .section-content .about-1,
+#about-3:checked ~ .section-content .about-1{
+    display: none;
+}
+.about-section input{
+    display: none;
+}
+/* END ABOUT SECTION */
+
+/* FEEDBACK SECTION */
+.main-content .container .feedback-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.main-content .container .feedback-section > div{
+    width: 30%;
+    font-size: 1.5em;
+    color: var(--primary-color);
+}
+.main-content .container .feedback-section .section-rating .checked{
+    color: orange;
+}
+.maint-content .container .feedback-section .section-rating{    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+}
+.maint-content .container .feedback-section .section-rating p{
+    margin-left: 3px;
+}
+/* END FEEDBACK SECTION */
+
+/* END MAIN CONTENT */
+
+/* FOOTER SECTION */
+footer .section-footer{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+footer .section-footer img{
+    width: 100%;
+    height: auto;
+    object-fit: fill;
+    position: relative;
+    bottom: -10px;
+}
+/* END FOOTER SECTION */
+@media all and (max-width: 599px){
+    .main-header .header-top{
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-header .header-top .logo{
+        left: 0;
+        position: relative;
+        margin-top: 0.8em;
+    }
+    .main-header .header-top .navbar ul{
+        gap: 1em;
+        flex-wrap: wrap;
+        margin: 0.8em 0;
+    }
+    .main-header .header-top .navbar ul li{
+        font-size: 0.8em;
+        width: 100px;
+        height: 40px;
+    }
+    .main-header .header-banner{
+        min-height: 0;
+        height: auto;
+    }
+    .main-header .header-banner .banner-text{
+        margin: 0.2em 1em;
+        gap: 5px;
+    }
+    .main-header .header-banner .banner-text img{
+        width: 20px;
+    }
+    .main-header .header-banner .banner-text a{
+        font-size: 0.8em;
+    }
+    .main-header .header-banner .banner-text::after{
+        height: 0.4em;
+        left: 1em;
+        bottom: -8px;   
+    }
+    .header-gallery{
+        flex-direction: column;
+    }
+    .header-gallery .gallery-title{
+        width: 100%;
+    }
+    .header-gallery .gallery-title div{
+        font-size: 1.5em;
+        flex-direction: row;
+        gap: 10px;
+        margin: 30px 0px;
+    }
+    .header-gallery .gallery-title div::after{
+        height: 25px;
+        width: 7%;
+        right: 3px;
+        bottom: -25px;
+    }
+    .header-gallery .gallery-content{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .header-gallery .gallery-content a{
+        margin: 10px;
+    }
+    .header-gallery .gallery-content a div{
+        width: 100px;
+        height: 100px;
+    }
+    .header-gallery .gallery-content a span{
+        font-size: 0.8em;
+    }
+    .main-content .container{
+        width: 90%;
+    }
+    .main-content .container .highlight-section{
+        flex-direction: column;
+        padding: 10px 25px;
+    }
+    .main-content .container .highlight-section .section-main{
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        margin-right: 0;
+    }
+    .main-content .container .highlight-section .section-side{
+        width: 100%;
+    }
+    .main-content .container .highlight-section .section-side h3{
+        font-size: 1em;
+        margin: 30px 0px
+    }
+    .main-content .container .highlight-section .section-side ul{
+        font-size: 1em;
+    }
+    .main-content .container .highlight-section .section-side ul li{
+        padding: 10px;
+    }
+    .main-content .section-title{
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+    .main-content .container .product-section{
+        font-size: 1em;
+    }
+    .main-content .container .product-section ul{
+        padding: 5px 10px;
+        margin-bottom: 1.2em;
+    }
+    .main-content .container .product-section ul li{
+        padding: 8px;
+    }
+    .main-content .container .recommended-section .section-banner{
+        height: auto;
+        min-height: 0;
+    }
+    .main-content .container .recommended-section .section-button h3{
+        font-size: 1.2em;
+        padding: 1.2em 0;
+    }
+    .main-content .container .recommended-section .section-button .button-group > a{
+        font-size: 1em;
+        padding: 10px;
+        margin: 10px 0;
+        height: 40px;
+    }
+    .main-content .container .maintenance-section .section-banner{
+        height: auto;
+        min-height: 0;
+    }
+    .main-content .container .maintenance-section .section-button h3{
+        font-size: 1.2em;
+        padding: 1.2em 0;
+    }
+    .main-content .container .maintenance-section .section-button .button-group > a{
+        font-size: 1em;
+        padding: 10px;
+        margin: 10px 0;
+        height: 40px;
+    }
+    .main-content .container .featured-section .section-header{
+        font-size: 1em;
+        padding: 0px 30px
+    }
+    .main-content .container .featured-section .section-content{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .main-content .container .featured-section .section-content .content-img{
+        width: 400px;
+        height: 200px;
+        margin-right: 0;
+    }
+    .main-content .container .featured-section .section-content .content-button{
+        width: 100%;
+        gap: 2em;
+    }
+    .main-content .container .featured-section .section-content .content-button > a{
+        font-size: 1em;
+        width: 150px;
+        height: 40px;
+    }
+    .main-content .container .categories-section{
+        font-size: 0.8em;
+    }
+    .main-content .container .categories-section > div{
+        width: 150px;
+        padding: 10px;
+    }
+    .main-content .container .categories-section > div .section-img{
+        width: 130px;
+        height: 130px;
+    }
+    .about-section{
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-section .section-button{
+        width: 100%;
+        flex-direction: row;
+        gap: 1em;
+        font-size: 1em;
+        justify-content: space-evenly;
+    }
+    .about-section .section-content{
+        width: 100%;
+        font-size: 0.8em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: normal;
+    }
+    .main-content .container .feedback-section{
+        justify-content: space-around;
+        gap: 1em;
+        flex-direction: column;
+    }
+    .main-content .container .feedback-section > div{
+        font-size: 0.8em;
+        width: 100%;
+    }
+}
+@media all and (min-width: 600px){
+    .main-header .header-top{
+        height: auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .main-header .header-top .logo{
+        left: 0;
+        position: relative;
+        margin-top: 0.8em;
+    }
+    .main-header .header-top .navbar ul{
+        gap: 1em;
+    }
+    .main-header .header-top .navbar ul li{
+        font-size: 0.8em;
+        width: 100px;
+    }
+    .main-header .header-banner{
+        min-height: 0;
+        height: auto;
+    }
+    .main-header .header-banner .banner-text{
+        margin: 0.2em 1em;
+        gap: 5px;
+    }
+    .main-header .header-banner .banner-text img{
+        width: 20px;
+    }
+    .main-header .header-banner .banner-text a{
+        font-size: 0.8em;
+    }
+    .main-header .header-banner .banner-text::after{
+        height: 0.4em;
+        left: 1em;
+        bottom: -8px;   
+    }
+    .header-gallery{
+        flex-direction: column;
+    }
+    .header-gallery .gallery-title{
+        width: 100%;
+    }
+    .header-gallery .gallery-title div{
+        font-size: 1.5em;
+        flex-direction: row;
+        gap: 10px;
+        margin: 30px 0px;
+    }
+    .header-gallery .gallery-title div::after{
+        height: 25px;
+        width: 7%;
+        right: 3px;
+        bottom: -25px;
+    }
+    .header-gallery .gallery-content{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .header-gallery .gallery-content a{
+        margin: 10px;
+    }
+    .header-gallery .gallery-content a div{
+        width: 100px;
+        height: 100px;
+    }
+    .header-gallery .gallery-content a span{
+        font-size: 0.8em;
+    }
+    .main-content .container{
+        width: 90%;
+    }
+    .main-content .container .highlight-section{
+        flex-direction: column;
+        padding: 10px 25px;
+    }
+    .main-content .container .highlight-section .section-main{
+        width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        margin-right: 0;
+    }
+    .main-content .container .highlight-section .section-side{
+        width: 100%;
+    }
+    .main-content .container .highlight-section .section-side h3{
+        font-size: 1em;
+        margin: 30px 0px
+    }
+    .main-content .container .highlight-section .section-side ul{
+        font-size: 1em;
+    }
+    .main-content .container .highlight-section .section-side ul li{
+        padding: 10px;
+    }
+    .main-content .section-title{
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+    .main-content .container .product-section{
+        font-size: 1em;
+    }
+    .main-content .container .product-section ul{
+        padding: 5px 10px;
+        margin-bottom: 1.2em;
+    }
+    .main-content .container .product-section ul li{
+        padding: 8px;
+    }
+    .main-content .container .recommended-section .section-banner{
+        height: auto;
+        min-height: 0;
+    }
+    .main-content .container .recommended-section .section-button h3{
+        font-size: 1.2em;
+        padding: 1.2em 0;
+    }
+    .main-content .container .recommended-section .section-button .button-group > a{
+        font-size: 1em;
+        padding: 10px;
+        margin: 10px 0;
+        height: 40px;
+    }
+    .main-content .container .maintenance-section .section-banner{
+        height: auto;
+        min-height: 0;
+    }
+    .main-content .container .maintenance-section .section-button h3{
+        font-size: 1.2em;
+        padding: 1.2em 0;
+    }
+    .main-content .container .maintenance-section .section-button .button-group > a{
+        font-size: 1em;
+        padding: 10px;
+        margin: 10px 0;
+        height: 40px;
+    }
+    .main-content .container .featured-section .section-header{
+        font-size: 1em;
+        padding: 0px 30px
+    }
+    .main-content .container .featured-section .section-content{
+        flex-direction: column;
+        gap: 1em;
+    }
+    .main-content .container .featured-section .section-content .content-img{
+        width: 500px;
+        height: 300px;
+        margin-right: 0;
+    }
+    .main-content .container .featured-section .section-content .content-button{
+        width: 100%;
+        gap: 2em;
+    }
+    .main-content .container .featured-section .section-content .content-button > a{
+        font-size: 1em;
+        width: 150px;
+        height: 40px;
+    }
+    .main-content .container .categories-section{
+        font-size: 0.8em;
+    }
+    .main-content .container .categories-section > div{
+        width: 150px;
+        padding: 10px;
+    }
+    .main-content .container .categories-section > div .section-img{
+        width: 130px;
+        height: 130px;
+    }
+    .about-section{
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-section .section-button{
+        width: 100%;
+        flex-direction: row;
+        gap: 1em;
+        font-size: 1em;
+        justify-content: space-evenly;
+    }
+    .about-section .section-content{
+        width: 100%;
+        font-size: 1em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: normal;
+    }
+    .main-content .container .feedback-section{
+        justify-content: space-around;
+        gap: 0.6em;
+    }
+    .main-content .container .feedback-section > div{
+        font-size: 1em;
+        width: 32%;
+    }
+    footer .section-footer{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    footer .section-footer img{
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        position: relative;
+        bottom: -10px;
+    }
+}
+@media all and (min-width: 960px){
+    .main-header .header-top{
+        height: 70px;
+        justify-content: space-around;
+    }
+    .main-header .header-top .logo{
+        left: 0;
+        position: relative;
+        margin-top: 0;
+    }
+    .main-header .header-top .navbar ul{
+        gap: 0.8em;
+    }
+    .main-header .header-top .navbar ul li{
+        font-size: 0.8em;
+        width: 120px;
+    }
+    .main-header .header-banner{
+        min-height: 0px;
+        height: auto;
+    }
+    .main-header .header-banner .banner-text {
+        margin: 1.2em 1.8em;
+        gap: 8px;
+    }
+    .main-header .header-banner .banner-text::after{
+        height: 0.6em;
+        left: 1em;
+        bottom: -10px;
+    }
+    .main-header .header-banner .banner-text a{
+        font-size: 1em;
+    }
+    .header-gallery{
+        flex-direction: row;
+    }
+    .header-gallery .gallery-title{
+        width: 25%;
+    }
+    .header-gallery .gallery-title div{
+        font-size: 1.1em;
+    }
+    .header-gallery .gallery-title div::after{
+        height: 20px;
+        right: 2px;
+        bottom: -20px;
+    }
+    .header-gallery .gallery-content a{
+        margin: 5px;
+    }
+    .header-gallery .gallery-content a div{
+        width: 120px;
+        height: 120px;
+    }
+    .header-gallery .gallery-content a span{
+        font-size: 0.8em;
+    }
+    .main-content .container .highlight-section{
+        padding: 10px 25px;
+        flex-direction: row;
+    }
+    .main-content .container .highlight-section .section-main{
+        margin: 2em;
+        width: 400px;
+        height: 400px;
+        border-radius: 20px;
+    }
+    .main-content .container .highlight-section .section-side{
+        width: 40%;
+    }
+    .main-content .container .highlight-section .section-side h3{
+        font-size: 1em;
+        margin-bottom: 0.8em;
+    }
+    .main-content .container .highlight-section .section-side h3::after{
+        height: 2px;
+    }
+    .main-content .container .highlight-section .section-side ul{
+        font-size: 1em;
+    }
+    .main-content .section-title{
+        font-size: 1em;
+    }
+    .main-content .section-title:before{
+        height: 2px;
+    }
+    .main-content .container .product-section{
+        font-size: 1em;
+    }
+    .main-content .container .product-section ul{
+        margin-bottom: 1em;
+    }
+    .main-content .container .product-section ul li{
+        padding: 5px;
+    }
+    .main-content .container .recommended-section .section-banner{
+        height: auto;
+        min-height: 0px;
+    }
+    .main-content .container .recommended-section .section-button h3{
+        font-size: 1em;
+        padding: 1em 0;
+    }
+    .main-content .container .recommended-section .section-button .button-group > a{
+        font-size: 0.8em;
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+    .main-content .container .maintenance-section .section-banner{
+        height: auto;
+        min-height: 0px;
+    }
+    .main-content .container .maintenance-section .section-button h3{
+        font-size: 1em;
+        padding: 1em 0;
+    }
+    .main-content .container .maintenance-section .section-button .button-group > a{
+        font-size: 0.8em;
+        margin: 10px 0;
+        padding: 0 10px;
+    }
+    .main-content .container .featured-section .section-header{
+        font-size: 0.8em;
+        padding: 10px 25px;
+    }
+    
+    .main-content .container .featured-section .section-content{
+        flex-direction: row;
+    }
+    .main-content .container .featured-section .section-content .content-img{
+        width: 600px;
+        height: 400px;
+        margin-right: 1em;
+    }
+    .main-content .container .featured-section .section-content .content-button{
+        width: 400px;
+        gap: 1em
+    }
+    .main-content .container .featured-section .section-content .content-button > a{
+        font-size: 0.8em;
+        width: 120px;
+        height: 40px;
+    }
+    .main-content .container .categories-section{
+        font-size: 0.8em;
+    }
+    .main-content .container .categories-section > div{
+        width: 180px;
+    }
+    .main-content .container .categories-section > div .section-img{
+        width: 160px;
+        height: 160px;
+    }
+    .main-content .container .categories-section > div h4{
+        padding: 4px 3px;
+
+    }
+    .main-content .container .categories-section > div p{
+        padding: 0px 3px;
+    }
+    .about-section{
+        width: 80%;
+        flex-direction: row;
+    }
+    .about-section .section-button{
+        font-size: 0.8em;
+        flex-direction: column;
+        width: 25%;
+        gap: 2em;
+        justify-content: start;
+    }
+    .about-section .section-content{
+        font-size: 0.8em;
+        line-height: normal;
+        width: 75%;
+        text-align: start;
+    }
+    .main-content .container .feedback-section{
+        gap: 0.8em;
+        justify-content: space-around;
+    }
+    .main-content .container .feedback-section > div{
+        font-size: 0.8em;
+        width: 32%;
+    }
+    footer .section-footer{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    footer .section-footer img{
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        position: relative;
+        bottom: -10px;
+    }
+}
+@media all and (min-width: 1280px){
+    .main-header .header-top{
+        height: 70px;
+        justify-content: space-around;
+    }
+    .main-header .header-top .logo{
+        left: 0;
+        position: relative;
+        margin-top: 0;
+    }
+    .main-header .header-top .navbar ul{
+        gap: 1.5em;
+    }
+    .main-header .header-top .navbar ul li{
+        font-size: 1em;
+        width: auto;
+    }
+    .main-header .header-banner{
+        min-height: 0px;
+        height: auto;
+    }
+    .main-header .header-banner .banner-text{
+        margin: 1.8em 3em;
+        gap: 10px;
+    }
+    .main-header .header-banner .banner-text a{
+        font-size: 1.2em;
+    }
+    .main-header .header-banner .banner-text::after {
+        height: 0.6em;
+        bottom: -10px;
+    }
+    .header-gallery .gallery-title div{
+        font-size: 1.6em;
+    }
+    .header-gallery .gallery-title div::after{
+        height: 30px;
+        right: 3px;
+        bottom: -30px;
+    }
+    .header-gallery .gallery-content a div{
+        width: 150px;
+        height: 150px;
+    }
+    .header-gallery .gallery-content a span{
+        font-size: 1em;
+    }
+    .main-content .container .highlight-section .section-main{
+        width: 500px;
+        height: 500px;
+    }
+    .main-content .container .highlight-section .section-side h3{
+        font-size: 1.6em;
+    }
+    .main-content .container .highlight-section .section-side h3::after{
+        height: 3px;
+    }
+    .main-content .container .highlight-section .section-side ul{
+        font-size: 1.4em;
+    }
+    .main-content .section-title{
+        font-size: 1.6em;
+    }
+    .main-content .container .product-section{
+        font-size: 1.4em;
+    }
+    .main-content .container .recommended-section .section-banner{
+        height: auto;
+        min-height: 0px;
+    }
+    .main-content .container .recommended-section .section-button h3{
+        font-size: 1.6em;
+    }
+    .main-content .container .recommended-section .section-button .button-group > a{
+        font-size: 1.1em;
+        padding: 20px;
+    }
+    .main-content .container .maintenance-section .section-banner{
+        height: auto;
+        min-height: 0px;
+    }
+    .main-content .container .maintenance-section .section-button h3{
+        font-size: 1.6em;
+    }
+    .main-content .container .maintenance-section .section-button .button-group > a{
+        font-size: 1.1em;
+        padding: 20px;
+    }
+    .main-content .container .featured-section .section-header{
+        font-size: 1.1em;
+    }
+    .main-content .container .featured-section .section-content .content-img{
+        width: 700px;
+        height: 500px;
+    }
+    .main-content .container .featured-section .section-content .content-button{
+        gap: 2em;
+    }
+    .main-content .container .featured-section .section-content .content-button > a{
+        font-size: 1.1em;
+        width: 170px;
+    }
+    .main-content .container .categories-section{
+        font-size: 1.1em;
+        justify-content: space-around;
+    }
+    .main-content .container .categories-section > div{
+        width: 195px;
+    }
+    .main-content .container .categories-section > div .section-img{
+        width: 175px;
+        height: 175px;
+    }
+    .about-section .section-button{
+        font-size: 1.3em;
+    }
+    .about-section .section-content{
+        font-size: 1.1em;
+    }
+    .main-content .container .feedback-section > div{
+        font-size: 1.1em;
+    }
+    footer .section-footer{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    footer .section-footer img{
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        position: relative;
+        bottom: -10px;
+    }
+}
+@media all and (min-width: 1920px){
+    .main-header .header-top .logo{
+        left: 5em;
+        margin-top: 0;
+    }
+    .main-header .header-top .navbar ul{
+        gap: 3em;
+    }
+    .main-header .header-top .navbar ul li{
+        font-size: 1.3em;
+        width: auto;
+    }
+    .main-header .header-banner .banner-text a{
+        font-size: 1.8em;
+    }
+    .header-gallery .gallery-content a div{
+        width: 250px;
+        height: 250px;
+    }
+    .header-gallery .gallery-title div{
+        font-size: 2.3em;
+
+    }
+    .header-gallery .gallery-content a span{
+        font-size: 1.3em;
+    }
+    .main-content .container .highlight-section .section-side h3{
+        font-size: 1.8em;
+    }
+    .main-content .container .highlight-section .section-side ul{
+        font-size: 1.6em;
+    }
+    .main-content .container .highlight-section .section-main{
+        width: 650px;
+        height: 650px;
+    }
+    .main-content .section-title{
+        font-size: 1.8em;
+    }
+    .main-content .container .product-section{
+        font-size: 1.6em;
+    }
+    .main-content .container .recommended-section .section-button h3{
+        font-size: 1.8em;
+    }
+    .main-content .container .recommended-section .section-button .button-group > a{
+        font-size: 1.3em;
+    }
+    .main-content .container .maintenance-section .section-button h3{
+        font-size: 1.8em;
+    }
+    .main-content .container .maintenance-section .section-button .button-group > a{
+        font-size: 1.3em;
+    }
+    .main-content .container .featured-section .section-header{
+        font-size: 1.3em;
+    }
+    .main-content .container .featured-section .section-content .content-img{
+        width: 800px;
+        height: 600px;
+    }
+    .main-content .container .featured-section .section-content .content-button > a{
+        font-size: 1.3em;
+        width: 180px;
+    }
+    .main-content .container .categories-section{
+        font-size: 1.3em;
+    }
+    .main-content .container .categories-section > div .section-img{
+        width: 260px;
+        height: 260px;
+    }
+    .main-content .container .categories-section > div{
+        width: 280px;
+    }
+    .about-section .section-button{
+        font-size: 1.6em;
+    }
+    .about-section .section-content{
+        font-size: 1.3em;
+    }
+    .main-content .container .feedback-section > div{
+        font-size: 1.3em;
+    }
+    footer .section-footer{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    footer .section-footer img{
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        position: relative;
+        bottom: -10px;
+    }
+}
+@media all and (min-width: 2560px){
+    .main-header{
+    width: 100%;
+    height: auto;
+    }
+    .main-header .header-top{
+        width: 100%;
+        height: 100px;
+        display: flex;
+        background: var(--primary-color);
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .main-header .header-top .logo{
+        width: 100px;
+        height: 50px;
+        overflow: hidden;
+        cursor: pointer;
+        position: absolute;
+        left: 10em;
+    }
+    .main-header .header-top .logo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main-header .header-top .navbar ul{
+        display: flex;
+        gap: 4em;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .main-header .header-top .navbar ul li{
+        width: auto;
+        height: 50px;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-header .header-top .navbar ul li::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: var(--secondary-color);
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        transition: 0.3s;
+        transform: skewX(-45deg);
+    }
+    .main-header .header-top .navbar ul li:hover::after{
+        width: 100%;
+    }
+    /* END HEADER TOP */
+
+    /* HEADER BANNER */
+    .main-header .header-banner{
+        width: 100%;
+        height: auto;
+        min-height: 400px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: end;
+        align-items: start;
+    }
+    .main-header .header-banner img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main-header .header-banner .banner-text{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        margin: 2em 4em;
+    }
+    .main-header .header-banner .banner-text::after{
+        position: absolute;
+        content: '';
+        height: 1em;
+        width: 90%;
+        left: 1.2em;
+        bottom: -20px;
+        background: var(--secondary-color);
+        transform: skewX(-45deg);
+    }
+    .main-header .header-banner .banner-text a{
+        font-size: 2em;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--primary-color);
+    }
+    .main-header .header-banner .banner-text img{
+        width: 35px;
+        color: var(--primary-color);
+    }
+    /* END HEADER BANNER */
+
+    /* HEADER GALLERY */
+    .header-gallery{
+        width: 100%;
+        display: flex;
+    }
+    .header-gallery .gallery-title{
+        width: 25%;
+        background: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .header-gallery .gallery-title div{
+        color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        text-align: center;
+        position: relative;
+        font-size: 2.5em;
+        letter-spacing: 0.2em;
+    }
+    .header-gallery .gallery-title div::after{
+        content: '';
+        position: absolute;
+        height: 40px;
+        width: 10%;
+        right: 5px;
+        bottom: -40px;
+        background: var(--secondary-color);
+    }
+    .header-gallery .gallery-content{
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+    .header-gallery .gallery-content a{
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--primary-color);
+    }
+    .header-gallery .gallery-content a:hover{
+        color: var(--secondary-color);
+    }
+    .header-gallery .gallery-content a div{
+        width: 300px;
+        height: 300px;
+        overflow: hidden;
+    }
+    .header-gallery .gallery-content a img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        padding: 10px 0;
+    }
+    .header-gallery .gallery-content a span{
+        text-transform: uppercase;
+        font-size: 1.5em;
+    }
+    /* END HEADER GALLERY*/
+
+    /* END MAIN HEADER */
+
+    /* MAIN CONTENT */
+    .main-content{
+        width: 100%;
+    }
+    .main-content .container{
+        width: 80%;
+        margin: 5em auto;
+        overflow: hidden;
+    }
+
+    /* HIGHLIGHT SECTION */
+    .main-content .container .highlight-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: start;
+        padding: 20px 50px;
+    }
+    .main-content .container .highlight-section .section-main{
+        margin-right: 4em;
+        width: 800px;
+        height: 800px;
+        border-radius: 30px;
+        box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.2), 12px 12px 15px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+    }
+    .main-content .container .highlight-section .section-main img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main-content .container .highlight-section .section-side{
+        width: 40%;
+        color: var(--primary-color);
+    }
+    .main-content .container .highlight-section .section-side h3{
+        font-size: 2em;
+        line-height: 1.2em;
+        position: relative;
+        margin-bottom: 1em;
+    }
+    .main-content .container .highlight-section .section-side h3::after{
+        position: absolute;
+        content: '';
+        height: 4px;
+        width: 100%;
+        left: 0;
+        bottom: -10px;
+        background: var(--primary-color);
+    }
+    .main-content .container .highlight-section .section-side ul{
+        font-size: 1.8em;
+    }
+    .main-content .container .highlight-section .section-side ul li{
+        padding: 15px 0;
+    }
+    .main-content .container .highlight-section .section-side ul li h4::before{
+        content: "\25FC";
+        color: var(--secondary-color);
+        font-weight: bold;
+        display: inline-block; 
+        width: 1.2em;
+    }
+    .main-content .container .highlight-section .section-side ul li p{
+        padding-left: 1.2em;
+    }
+    /* END HIGHLIGHT SECTION */
+
+    /* SECTION TITLE */
+    .main-content .section-title{
+        width: 100%;
+        color: var(--primary-color);
+        text-align: center;
+        position: relative;
+        margin: 20px 0;
+        text-transform: uppercase;
+        font-size: 2em;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    .main-content .section-title:before{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        background: var(--secondary-color);
+        z-index: -2;
+    }
+    .main-content .section-title span{
+        background: #fff;
+        padding: 13px;
+    }
+    /* END SECTION TITLE */
+
+    /* PRODUCT SECTION */
+    .main-content .container .product-section{
+        width: 100%;
+        padding: 0 30px;
+        font-size: 1.8em;
+    }
+    .main-content .container .product-section h4{
+        text-transform: uppercase;
+        color: var(--primary-color);
+    }
+    .main-content .container .product-section ul{
+        padding: 10px 20px;
+        margin-bottom: 1.5em;
+        list-style: square;
+    }
+    .main-content .container .product-section ul li{
+        padding: 10px 0;
+        color: var(--secondary-color);
+    }
+    .main-content .container .product-section ul li span{
+        color: var(--primary-color);
+    }
+    /* END PRODUCTION SECTION */
+
+    /* RECOMMENDED SECTION */
+    .main-content .container .recommended-section .section-banner{
+        width: 100%;
+        min-height: 230px;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+    }
+    .main-content .container .recommended-section .section-banner img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .main-content .container .recommended-section .section-button{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--primary-color);
+        text-transform: uppercase;
+    }
+    .main-content .container .recommended-section .section-button h3{
+        padding: 1.5em 0;
+        font-size: 2em;
+    }
+    .main-content .container .recommended-section .section-button .button-group{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .main-content .container .recommended-section .section-button .button-group > a{
+        width: auto;
+        height: 50px;
+        background: #fff;
+        margin: 20px 0;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 3px 3px 4px rgba(0, 0, 0, 0.12);
+        border: none;
+        color: var(--primary-color);
+        font-size: 1.5em;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+    .main-content .container .recommended-section .section-button .button-group > a:focus{
+        background: var(--secondary-color);
+        outline: 1px solid var(--secondary-color);
+        color: var(--text-color);
+    }
+    .main-content .container .recommended-section .section-button .button-group > a:hover{
+        background: var(--secondary-color);
+        color: var(--text-color);
+    }
+    /* END RECOMMENDED SECTION */
+
+    /* MAINTENANCE SECTION */
+    .main-content .container .maintenance-section .section-banner{
+        width: 100%;
+        height: auto;
+        min-height: 230px;
+        margin: auto;
+        overflow: hidden;
+    }
+    .main-content .container .maintenance-section .section-banner img{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    .main-content .container .maintenance-section .section-button{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--primary-color);
+        text-transform: uppercase;
+    }
+    .main-content .container .maintenance-section .section-button h3{
+        padding: 1.5em 0;
+        font-size: 2em;
+    }
+    .main-content .container .maintenance-section .section-button .button-group{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .main-content .container .maintenance-section .section-button .button-group > a{
+        width: auto;
+        height: 50px;
+        background: #fff;
+        margin: 20px 0;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 3px 3px 4px rgba(0, 0, 0, 0.12);
+        border: none;
+        color: var(--primary-color);
+        font-size: 1.5em;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 30px;
+    }
+    .main-content .container .maintenance-section .section-button .button-group > a:focus{
+        background: var(--secondary-color);
+        outline: 1px solid var(--secondary-color);
+        color: var(--text-color);
+    }
+    .main-content .container .maintenance-section .section-button .button-group > a:hover{
+        background: var(--secondary-color);
+        color: var(--text-color);
+    }
+    /* END MAINTENANCE SECTION */
+
+    /* FEATURED SECTION */
+    .main-content .container .featured-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .main-content .container .featured-section .section-header{
+        padding: 20px 50px;
+        font-size: 1.5em;
+        color: var(--primary-color);
+    }
+    .main-content .container .featured-section .section-content{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .main-content .container .featured-section .section-content .content-img{
+        width: 900px;
+        height: 700px;
+        overflow: hidden;
+        margin-right: 2em;
+    }
+    .main-content .container .featured-section .section-content .content-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main-content .container .featured-section .section-content .content-button{
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+    .main-content .container .featured-section .section-content .content-button > a{
+        color: var(--primary-color);
+        width: 200px;
+        height: 50px;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1), 3px 3px 4px rgba(0, 0, 0, 0.12);
+        border: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 5px;
+    }
+    .main-content .container .featured-section .section-content .content-button > a:focus{
+        background: var(--secondary-color);
+        outline: 1px solid var(--secondary-color);
+        color: var(--text-color);
+    }
+    .main-content .container .featured-section .section-content .content-button > a:hover{
+        background: var(--secondary-color);
+        color: var(--text-color);
+    }
+    /* END FEATURED SECTION */
+
+    /* CATEGORIES SECTION */
+    .main-content .container .categories-section{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: start;
+        flex-wrap: wrap;
+        color: var(--primary-color);
+        font-size: 1.5em;
+        text-align: start;
+    }
+    .main-content .container .categories-section > div{
+        width: 300px;
+        padding: 10px;
+        /* margin: 20px; */
+    }
+    .main-content .container .categories-section > div .section-img{
+        width: 280px;
+        height: 280px;
+        overflow: hidden;
+    }
+    .main-content .container .categories-section > div .section-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .main-content .container .categories-section > div h4{
+        font-weight: bold;
+        padding: 5px 4px;
+    }
+    .main-content .container .categories-section > div p{
+        font-weight: normal;
+        padding: 0 4px;
+    }
+    /* END CATEGORIES SECTION */
+
+    /* ABOUT SECTION */
+    .container-about{
+        width: 100%;
+        box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+    }
+    .about-section{
+        width: 80%;
+        display: flex;
+        margin: auto;
+        padding: 40px 0;
+    }
+    .about-section .section-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 25%;
+        gap: 2em;
+        text-transform: uppercase;
+        font-size: 1.8em;
+    }
+    .about-section .section-button label{
+        cursor: pointer;
+        display: flex;
+        color: var(--primary-color);
+        padding: 0 5px;
+        letter-spacing: 2px;
+    }
+    .about-section .section-content{
+        padding: 10px 20px;
+        width: 75%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        text-align: start;
+        font-size: 1.5em;
+        font-weight: normal;
+        color: var(--primary-color);
+        line-height: 1.5em;
+    }
+    .about-section .section-content .text{
+        display: none;
+    }
+    .about-section .section-content .about-1{
+        display: block;
+    }
+    .about-section .section-button label h3{
+        padding: 0 5px;
+    }
+    #about-1 ~ .section-button .about-1 h3,
+    #about-2 ~ .section-button .about-2 h3,
+    #about-3 ~ .section-button .about-3 h3{
+        border-bottom: 3px solid transparent;
+    }
+    #about-1:checked ~ .section-button .about-1 h3,
+    #about-2:checked ~ .section-button .about-2 h3,
+    #about-3:checked ~ .section-button .about-3 h3{
+        border-bottom: 3px solid var(--secondary-color);
+    }
+    #about-1:checked ~ .section-content .about-1,
+    #about-2:checked ~ .section-content .about-2,
+    #about-3:checked ~ .section-content .about-3{
+        display: block;
+    }
+    #about-2:checked ~ .section-content .about-1,
+    #about-3:checked ~ .section-content .about-1{
+        display: none;
+    }
+    .about-section input{
+        display: none;
+    }
+    /* END ABOUT SECTION */
+
+    /* FEEDBACK SECTION */
+    .main-content .container .feedback-section{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-wrap: wrap;
+        gap: 1em;
+    }
+    .main-content .container .feedback-section > div{
+        width: 30%;
+        font-size: 1.5em;
+        color: var(--primary-color);
+    }
+    .main-content .container .feedback-section .section-rating .checked{
+        color: orange;
+    }
+    .maint-content .container .feedback-section .section-rating{    
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        text-align: start;
+    }
+    .maint-content .container .feedback-section .section-rating p{
+        margin-left: 3px;
+    }
+    /* END FEEDBACK SECTION */
+
+    /* END MAIN CONTENT */
+
+    /* FOOTER SECTION */
+    footer .section-footer{
+        width: 100%;
+        height: auto;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    footer .section-footer img{
+        width: 100%;
+        height: auto;
+        object-fit: fill;
+        position: relative;
+        bottom: -10px;
+    }
+}
+
+</style>
+<body>
+
+    <header class="main-header">
+        <div class="header-top">
+            <div class="logo">
+                <img src="https://via.placeholder.com/100x50.jpg" alt="100x50.jpg" title="logo">
+            </div>
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">Body parts</a></li>
+                    <li><a href="#">Lightings</a></li>
+                    <li><a href="#">Brakes and suspensions</a></li>
+                    <li><a href="#">Engine and Drivetrain</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header-banner">
+            <img src="https://live.staticflickr.com/65535/53186145451_036fe5a705_b.jpg" alt="1920x400.png">
+            <div class="banner-text">
+                <img src="./img/check.png" alt="">
+                <a href="">Visit Store</a>
+            </div>
+        </div>
+        <div class="header-gallery">
+            <div class="gallery-title">
+                <div>
+                    <p><strong>Top</strong></p>
+                    <p>Categories</p>
+                </div>
+            </div>
+            <div class="gallery-content">
+                <a href="#">
+                    <div><img src="https://via.placeholder.com/150x150.jpg" alt="150x150.jpg"></div>
+                    <span>Door mirror</span>
+                </a>
+                <a href="#">
+                    <div><img src="https://via.placeholder.com/150x150.jpg" alt="150x150.jpg"></div>
+                    <span>door handle</span>
+                </a>
+                <a href="#">
+                    <div><img src="https://via.placeholder.com/150x150.jpg" alt="150x150.jpg"></div>
+                    <span>headlights</span>
+                </a>
+                <a href="#">
+                    <div><img src="https://via.placeholder.com/150x150.jpg" alt="150x150.jpg"></div>
+                    <span>tail lights</span>
+                </a>
+                <a href="#">
+                    <div><img src="https://via.placeholder.com/150x150.jpg" alt="150x150.jpg"></div>
+                    <span>Fog lights</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="container">
+            <div class="highlight-section">
+                <div class="section-main">
+                    <img src="https://via.placeholder.com/500x500.jpg" alt="500x500.jpg">
+                </div>
+                <div class="section-side">
+                    <h3><strong>Fits GMC Acadia Headlight 2007 2008 Pair Driver and Passenger Side w/ Bulbs</strong></h3>
+                    <ul>
+                        <li>
+                            <h4>Partslink Number:</h4>
+                            <p>Gm2502294 | GM2503294</p>
+                        </li>
+                        <li>
+                            <h4>OEM Number:</h4>
+                            <p>258267644 | 258267654</p>
+                        </li>
+                        <li>
+                            <h4>Position:</h4>
+                            <p>Driver and Passenger Side</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <p class="section-title"><span>Product Description</span></p>
+        <section class="container">
+            <div class="product-section">
+                <h4>Features</h4>
+                <ul>
+                    <li><span>Exact fit to OEM#: 25826765 and Parstlink#: Gm2502294</span></li>
+                    <li><span>NSF Certified (Passwed stringent quality standards)</span></li>
+                    <li><span>Assembly includes bulbs, lens, housing and socket</span></li>
+                    <li><span>Factory Sealed-Brand new in box</span></li>
+                    <li><span>Zero Restocking Fee for returns made within 30 days of delivery. 1 Year Limited Warranty</span></li>
+                </ul>
+                <h4>Exact fitment with the following vehicles:</h4>
+                <ul>
+                    <li><span>GMC ACADIA 2007</span></li>
+                    <li><span>GMC ACADIA 2008</span></li>
+                </ul>
+                <ul>
+                    <h4>Misc Notes 1:</h4>
+                    <li><span>Halogen; 1st Design; Blue Lens</span></li>
+                </ul>
+                <ul>
+                    <h4>Misc Notes 2:</h4>
+                    <li><span>GC ACADIA 07-08 HL ASY 1ST DESIGN W/O HID TYPE LH NSF Driver and Passenger Side</span></li>
+                </ul>
+                <ul>
+                    <li><span>Assembly includes bulbs, lens, housing and socket</span></li>
+                    <li><span>Factory Sealed-Brandnew in box</span></li>
+                </ul>
+                <h4>Premium aftermarket replacement parts:</h4>
+                <ul>
+                    <li><span>Exact fit to original equipment manufacturer</span></li>
+                    <li><span>All of our items are DOT and SAE certified</span></li>
+                </ul>
+                <h4>Additional info</h4>
+                <ul>
+                    <li><span>Supplier Title: GC ACADIA 07-08 HL ASY 1ST DESIGN W/O HID TYPE NSF</span></li>
+                </ul>
+            </div>
+        </section>
+
+         <section class="container">
+            <div class="recommended-section">
+                <div class="section-banner">
+                    <img src="https://live.staticflickr.com/65535/53186346015_39f8c51bb2_b.jpg" alt="1920x400.png">
+                </div>
+                <div class="section-button">
+                    <h3>Recommended parts for gmc acadia</h3>
+                    <div class="button-group">
+                        <a href="#" target="_blank"><span>Door mirror</span></a>
+                        <a href="#" target="_blank"><span>Door handle</span></a>
+                        <a href="#" target="_blank"><span>Fender liners</span></a>
+                        <a href="#" target="_blank"><span>Hoods</span></a>
+                        <a href="#" target="_blank"><span>Mirror glass</span></a>
+                        <a href="#" target="_blank"><span>Grilles</span></a>
+                        <a href="#" target="_blank"><span>Bumpers</span></a>
+                        <a href="#" target="_blank"><span>Bumber end</span></a>
+                        <a href="#" target="_blank"><span>Tail gate</span></a>
+                        <a href="#" target="_blank"><span>Radiators</span></a>
+                        <a href="#" target="_blank"><span>Headlights</span></a>
+                        <a href="#" target="_blank"><span>Tail lights</span></a>
+                        <a href="#" target="_blank"><span>Fog lights</span></a>
+                        <a href="#" target="_blank"><span>bulbs</span></a>
+                        <a href="#" target="_blank"><span>Turn signal lights</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="maintenance-section">
+                <div class="section-banner">
+                    <img src="https://live.staticflickr.com/65535/53186346015_39f8c51bb2_b.jpg" alt="1700x230.jpg">
+                </div>
+                <div class="section-button">
+                    <h3>Maintenance parts for gmc acadia</h3>
+                    <div class="button-group">
+                        <a href="#" target="_blank"><span>Air filter</span></a>
+                        <a href="#" target="_blank"><span>wiper</span></a>
+                        <a href="#" target="_blank"><span>spark plug</span></a>
+                        <a href="#" target="_blank"><span>cabin filters</span></a>
+                        <a href="#" target="_blank"><span>brake pads</span></a>
+                        <a href="#" target="_blank"><span>Break shoes</span></a>
+                        <a href="#" target="_blank"><span>belts</span></a>
+                        <a href="#" target="_blank"><span>Starters and batteries</span></a>
+                        <a href="#" target="_blank"><span>Headlight</span></a>
+                        <a href="#" target="_blank"><span>Tail lights</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p class="section-title"><span>Featured makes</span></p>
+        <section class="container">
+            <div class="featured-section">
+                <div class="section-header">
+                    <p>Wooparts offers a wide range of selection of different categories with OEM and After Market products for various vehicle models. Let us assist you on finding the product that you need by using our Shop By Vehicle section. Start your way by exploring our diverse collection of car makes below.</p>
+                </div>
+                <div class="section-content">
+                    <div class="content-img">
+                        <img src="https://via.placeholder.com/700x500.jpg" alt="700x500.jpg">
+                    </div>
+                    <div class="content-button">
+                        <a href="#" target="_blank"><span>Toyota</span></a>
+                        <a href="#" target="_blank"><span>Honda</span></a>
+                        <a href="#" target="_blank"><span>Jeep</span></a>
+                        <a href="#" target="_blank"><span>ford</span></a>
+                        <a href="#" target="_blank"><span>buick</span></a>
+                        <a href="#" target="_blank"><span>dodge</span></a>
+                        <a href="#" target="_blank"><span>gmc</span></a>
+                        <a href="#" target="_blank"><span>chevrolet</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       <p class="section-title"><span>Featured categories</span></p>
+        <section class="container">
+            <div class="categories-section">
+                <div>
+                    <div class="section-img">
+                        <img src="https://via.placeholder.com/175x175.jpg" alt="175x175.jpg">
+                    </div>
+                    <h4>Title</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, tenetur voluptatem. Deserunt numquam odio tempore exercitationem nemo odit illum repellat?</p>
+                </div>
+                <div>
+                    <div class="section-img">
+                        <img src="https://via.placeholder.com/175x175.jpg" alt="175x175.jpg">
+                    </div>
+                    <h4>Title</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum illum aspernatur aut?</p>
+                </div>
+                <div>
+                    <div class="section-img">
+                        <img src="https://via.placeholder.com/175x175.jpg" alt="175x175.jpg">
+                    </div>
+                    <h4>Title</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae eveniet atque fuga.</p>
+                </div>
+                <div>
+                    <div class="section-img">
+                        <img src="https://via.placeholder.com/175x175.jpg" alt="175x175.jpg">
+                    </div>
+                    <h4>Title</h4>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni illum quisquam fugit.</p>
+                </div>
+            </div>
+        </section>
+
+        <p class="section-title"><span>About wooparts</span></p>
+        <section class="container-about">
+            <div class="about-section">
+                <input type="radio" name="slider" id="about-1" checked>
+                <input type="radio" name="slider" id="about-2">
+                <input type="radio" name="slider" id="about-3">
+                <div class="section-button">
+                    <label for="about-1" class="about-1">
+                        <h3>Return policy</h3>
+                    </label>
+                    <label for="about-2" class="about-2">
+                        <h3>Shipping</h3>
+                    </label>
+                    <label for="about-3" class="about-3">
+                        <h3>Warranty</h3>
+                    </label>
+                </div>
+                <div class="section-content">
+                    <div class="about-1 text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est omnis autem odio? Praesentium, alias consequatur sit saepe iste nam assumenda quasi inventore natus error ducimus ab debitis recusandae sunt adipisci, qui enim quam velit! Maxime illum tempore, sint quasi assumenda eos neque commodi delectus! Minima exercitationem impedit quod porro quam!</p>
+                    </div>
+                    <div class="about-2 text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod molestias nostrum temporibus explicabo porro voluptatem cupiditate repudiandae architecto rerum. Porro sequi accusamus deserunt iste repellat officiis dicta totam, facilis ducimus iusto debitis maiores sunt veritatis dolorem corporis repudiandae dignissimos quidem, doloribus nulla laborum ratione. Deleniti recusandae eligendi accusamus quam voluptas?</p>
+                    </div>
+                    <div class="about-3 text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil unde voluptatibus vitae consequatur, atque delectus eaque aliquid! Labore corrupti ab, deleniti eos ea quo repellendus dicta aspernatur, dolor voluptate quasi blanditiis quam odit officiis et aliquam consequuntur debitis animi quae ad! Officiis quasi neque, veniam voluptas placeat dolore voluptates molestias.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="feedback-section">
+                <div>
+                    <h4>Works Flawlessly</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat temporibus ut doloribus.</p>
+                    <div class="section-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <p>Buyer: Juan Dela Cruz</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Works Flawlessly</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat tempo ribus ut doloribus.</p>
+                    <div class="section-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <p>Buyer: Juan Dela Cruz</p>
+                    </div>
+                </div>
+                <div>
+                    <h4>Works Flawlessly</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat temporibus ut doloribus.</p>
+                    <div class="section-rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <p>Buyer: Juan Dela Cruz</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="section-footer">
+            <img src="https://live.staticflickr.com/65535/53186346025_4c491ede10_b.jpg" alt="1920x400.png">
+        </div>
+    </footer>
+
+
+</body>
+</html>
